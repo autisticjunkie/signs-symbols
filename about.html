@@ -18,9 +18,7 @@
             font-family: 'Matrix Code NFI', monospace;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
@@ -29,6 +27,7 @@
         .container {
             max-width: 800px;
             width: 100%;
+            margin: auto;
         }
 
         .header {
@@ -43,12 +42,14 @@
             margin-bottom: 20px;
             white-space: pre-wrap;
             word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .footer-box {
             border: 2px solid #00ff00;
             padding: 10px;
             text-align: center;
+            margin-top: auto;
         }
 
         .animated-text {
@@ -65,17 +66,23 @@
         }
 
         @media (max-width: 600px) {
-    .header {
-        font-size: 1.5em;
-    }
+            body {
+                padding: 10px;
+            }
 
-    .content-box {
-        font-size: 12px;
-        padding: 15px;
-    }
-}
+            .header {
+                font-size: 1.5em;
+            }
 
+            .content-box {
+                font-size: 14px;
+                padding: 15px;
+            }
 
+            ul {
+                padding-left: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,7 +94,7 @@
                   Welcome to <strong>Signs & Symbols</strong>—the ultimate fusion of history, humor, and blockchain innovation!
                 </p>
                 <p>
-                  Our project is more than just a meme coin; it’s a digital archive dedicated to preserving and celebrating the signs and symbols that have shaped human culture across millennia. From ancient cave carvings to modern emojis, every sign tells a story—and now, with signs % symbols, you can be part of that story too.
+                  Our project is more than just a meme coin; it's a digital archive dedicated to preserving and celebrating the signs and symbols that have shaped human culture across millennia. From ancient cave carvings to modern emojis, every sign tells a story—and now, with signs % symbols, you can be part of that story too.
                 </p>
                 <h2>What Makes Us Unique?</h2>
                 <ul>
@@ -95,14 +102,12 @@
                   <li><strong>"User Contributions":</strong> Upload your own designs or reinterpretations, and see them added to the ever-growing archive.</li>
                   <li><strong>"Symbol Creation Tools":</strong> Use our generator to craft your personalized symbols and mint them into NFTs tied to the Signs & symbols Coin ecosystem.</li>
                   <li><strong>"Blockchain-Powered Legacy":</strong> Each symbol is tokenized on the blockchain, creating an immutable record that combines ancient wisdom with modern technology.</li>
-                  <li><strong>"Meme Culture with Purpose":</strong> S&S isn’t just a cryptocurrency; it’s a movement to preserve the essence of human expression while embracing the fun and irreverence of meme culture.</li>
+                  <li><strong>"Meme Culture with Purpose":</strong> S&S isn't just a cryptocurrency; it's a movement to preserve the essence of human expression while embracing the fun and irreverence of meme culture.</li>
                 </ul>
                 <p>
                   Join us on this journey where history meets humor, creativity fuels culture, and every sign points to the future.
                 </p>
-            
-              </section>
-              
+            </section>
         </div>
         <div class="footer-box">
             © 2024 signs & symbols by autistic junkie.
