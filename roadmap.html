@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap - Signs & Symbols Coin</title>
+    <style>
+        @font-face {
+            font-family: 'Matrix Code NFI';
+            src: url('/fonts/matrix-code-nfi.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Matrix Code NFI', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            border: 2px solid #00ff00;
+            padding: 20px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .animated-text {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 0.1s forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Roadmap</h1>
+        <div class="content-box" id="content">
+Roadmap for Signs & Symbols Coin
+
++------------------------------------------------------------------------------+
+|                       Phase 1: Concept and Foundation                         |
++------------------------------------------------------------------------------+
+Q1 2024:
+• Official Launch the Signs & Symbols Coin token on pump.fun
+• Begin community building on social media platforms
+
++------------------------------------------------------------------------------+
+|               Phase 2: Early Development and Community Growth                 |
++------------------------------------------------------------------------------+
+Q2 2024:
+• Release the interactive symbol archive, allowing users to explore and search historical symbols
+• Implement basic symbol creation tools
+• Begin symbol upload functionality for community contributions
+• Integrate user profiles for symbol ownership and contribution tracking
+
++------------------------------------------------------------------------------+
+|                  Phase 3: Symbol Marketplace & NFT Integration                |
++------------------------------------------------------------------------------+
+Q3 2024:
+• Launch NFT minting for symbol creation, allowing users to tokenize their designs
+• Open a marketplace where users can buy, sell, and trade tokenized symbols
+• Introduce community-driven challenges and rewards (e.g., symbol creation contests)
+• Develop symbol analytics features, including historical data and trends
+• Implement symbol-based NFTs with proof of ownership and rarity
+
++------------------------------------------------------------------------------+
+|                   Phase 4: Advanced Features & Partnerships                   |
++------------------------------------------------------------------------------+
+Q4 2024:
+• Launch AR symbol explorer, allowing users to interact with symbols in real-world settings
+• Develop partnerships with NFT platforms, art galleries, and metaverse projects for symbol integration
+• Expand cultural and historical resources on the platform to provide deeper insights into each symbol's origin and meaning
+• Implement multilingual support to make the platform accessible worldwide
+• Enhance gamification elements, allowing users to collect, trade, and complete symbol-based quests
+
++------------------------------------------------------------------------------+
+|               Phase 5: Community Engagement & Global Expansion                |
++------------------------------------------------------------------------------+
+2025:
+• Introduce decentralized governance for the platform, allowing the community to vote on updates, symbol categorization, and new features
+• Roll out mobile app for easier access and symbol management
+• Continue community-driven events to encourage symbol creation and sharing
+• Launch educational initiatives like webinars, workshops, and partnerships with schools or universities to promote the project globally
+• Expand global partnerships and integrations with cultural, historical, and creative organizations
+
++------------------------------------------------------------------------------+
+|                                Future Vision                                  |
++------------------------------------------------------------------------------+
+Establish Signs & Symbols Coin as the premier platform for symbol discovery, creation, and exchange in both the physical and digital worlds, blending history with the future of blockchain technology.
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.getElementById('content');
+            const words = content.textContent.split(/\s+/);
+            content.textContent = '';
+
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.textContent = word + ' ';
+                span.classList.add('animated-text');
+                span.style.animationDelay = `${index * 50}ms`;
+                content.appendChild(span);
+            });
+
+            setTimeout(() => {
+                document.querySelectorAll('.animated-text').forEach(span => {
+                    span.style.animationPlayState = 'running';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>

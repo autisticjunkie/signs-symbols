@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Matrix Project</title>
+    <style>
+        @font-face {
+            font-family: 'Matrix Code NFI';
+            src: url('/fonts/matrix-code-nfi.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Matrix Code NFI', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            border: 2px solid #00ff00;
+            padding: 20px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .footer-box {
+            border: 2px solid #00ff00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .animated-text {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeIn 0.1s forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">About</h1>
+        <div class="content-box" id="content">
+            <section id="about">
+                <p>
+                  Welcome to <strong>Signs & Symbols</strong>—the ultimate fusion of history, humor, and blockchain innovation!
+                </p>
+                <p>
+                  Our project is more than just a meme coin; it’s a digital archive dedicated to preserving and celebrating the signs and symbols that have shaped human culture across millennia. From ancient cave carvings to modern emojis, every sign tells a story—and now, with signs % symbols, you can be part of that story too.
+                </p>
+                <h2>What Makes Us Unique?</h2>
+                <ul>
+                  <li><strong>"Interactive Archive":</strong> Dive into the largest database of signs and symbols ever created. Search, explore, and learn the meanings behind iconic symbols from history.</li>
+                  <li><strong>"User Contributions":</strong> Upload your own designs or reinterpretations, and see them added to the ever-growing archive.</li>
+                  <li><strong>"Symbol Creation Tools":</strong> Use our generator to craft your personalized symbols and mint them into NFTs tied to the Signs & symbols Coin ecosystem.</li>
+                  <li><strong>"Blockchain-Powered Legacy":</strong> Each symbol is tokenized on the blockchain, creating an immutable record that combines ancient wisdom with modern technology.</li>
+                  <li><strong>"Meme Culture with Purpose":</strong> S&S isn’t just a cryptocurrency; it’s a movement to preserve the essence of human expression while embracing the fun and irreverence of meme culture.</li>
+                </ul>
+                <p>
+                  Join us on this journey where history meets humor, creativity fuels culture, and every sign points to the future.
+                </p>
+            
+              </section>
+              
+        </div>
+        <div class="footer-box">
+            © 2024 signs & symbols by autistic junkie.
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.getElementById('content');
+            const words = content.textContent.split(/\s+/);
+            content.textContent = '';
+
+            words.forEach((word, index) => {
+                const span = document.createElement('span');
+                span.textContent = word + ' ';
+                span.classList.add('animated-text');
+                span.style.animationDelay = `${index * 100}ms`;
+                content.appendChild(span);
+            });
+
+            setTimeout(() => {
+                document.querySelectorAll('.animated-text').forEach(span => {
+                    span.style.animationPlayState = 'running';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
